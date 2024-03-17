@@ -1,5 +1,5 @@
 const apiKey = "6f4c3b9854c54936849155251240603";
-const apiUrl = "http://api.weatherapi.com/v1/current.json?q=";
+const apiUrl = "https://api.weatherapi.com/v1/current.json?q=";
 
 
 
@@ -90,7 +90,7 @@ function fetchFutureForecast(location) {
         const formattedTime = currentDay.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); 
 
 
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=6f4c3b9854c54936849155251240603&q=${location}&days=1&aqi=no&alerts=no&dt=${formattedDate}&time=${formattedTime}`)
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=6f4c3b9854c54936849155251240603&q=${location}&days=1&aqi=no&alerts=no&dt=${formattedDate}&time=${formattedTime}`)
             .then(response => response.json())
             .then(data => {
                 document.getElementById(`hour${i + 1}`).innerHTML = formattedTime;
@@ -116,7 +116,7 @@ function fetchFutureForecastDays(location) {
         const formattedDate = currentDay.toISOString().split('T')[0];
         console.log(formattedDate);
 
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=6f4c3b9854c54936849155251240603 &q=${location}&days=10&aqi=yes&alerts=yes&dt=${formattedDate}`)
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=6f4c3b9854c54936849155251240603 &q=${location}&days=10&aqi=yes&alerts=yes&dt=${formattedDate}`)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
@@ -143,7 +143,7 @@ function fetchPastForecastDays(location) {
 
         const formattedDate = currentDay.toLocaleDateString();
 
-        fetch(`http://api.weatherapi.com/v1/history.json?key=6f4c3b9854c54936849155251240603&q=${location}&dt=${formattedDate}`)
+        fetch(`https://api.weatherapi.com/v1/history.json?key=6f4c3b9854c54936849155251240603&q=${location}&dt=${formattedDate}`)
             .then(response => response.json())
             .then(data => {
                 document.getElementById(`Date${i}`).innerHTML = formattedDate;
