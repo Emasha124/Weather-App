@@ -9,7 +9,7 @@
 
     max-width: 500;
     max-height: 20rem;
-    background-image:url(./photos/istockphoto-178988183-2048x2048.jpg);
+    background-image:url("./photos/istockphoto-178988183-2048x2048.jpg");
     background-repeat: no-repeat;
     background-size:cover;
 }
