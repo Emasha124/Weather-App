@@ -9,7 +9,7 @@
 
     max-width: 500;
     max-height: 20rem;
-    background-image:url("./photos/background.jpg");
+    background-image:url("./background.jpg");
     background-repeat: no-repeat;
     background-size:cover;
 }
